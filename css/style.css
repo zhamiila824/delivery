@@ -87,6 +87,7 @@ line-height: 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 44px;
 }
 .section-title{
     font-style: normal;
@@ -94,6 +95,7 @@ line-height: 24px;
     font-size: 36px;
     line-height: 42px;
     color: #000000;
+    margin: 0;
 }
 .cards{
     display: flex;
@@ -106,6 +108,7 @@ line-height: 24px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
     border-radius: 7px;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 .card-img{
     width: 384px;
@@ -141,4 +144,32 @@ line-height: 24px;
 .card-info{
     display: flex;
     align-items: center;
+}
+.card-rating{
+    margin-right: 26px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+    color: #FFC107;
+}
+.card-price, .card-category{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+    color: #8C8C8C;
+}
+.card-price{
+    margin-right: 10px;
+}
+.card-price:after{
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: #8C8C8C;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-left: 10px;
 }

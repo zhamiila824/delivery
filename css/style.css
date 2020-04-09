@@ -9,6 +9,9 @@ body{
     max-width: 1200px;
     margin: auto;
 }
+main{
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%);
+}
 .header{
     display: flex;
     align-items: center;
@@ -27,7 +30,7 @@ body{
     padding-left: 35px;
 }
 .input-address{  
-    width: 640px;
+    flex: 0.7;
     background-image: url(../img/home.svg);
 }
 .input-search{
@@ -109,6 +112,7 @@ line-height: 24px;
     border-radius: 7px;
     overflow: hidden;
     margin-bottom: 30px;
+    flex-basis: 30%;
 }
 .card-img{
     width: 384px;
@@ -144,6 +148,7 @@ line-height: 24px;
 .card-info{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 .card-rating{
     margin-right: 26px;
@@ -163,6 +168,12 @@ line-height: 24px;
 .card-price{
     margin-right: 10px;
 }
+.card-category{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 150px;
+}
 .card-price:after{
     content: "";
     width: 5px;
@@ -172,4 +183,171 @@ line-height: 24px;
     border-radius: 50%;
     vertical-align: middle;
     margin-left: 10px;
+}
+footer{
+    padding: 60px 0;
+}
+.footer-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-nav{
+    margin-right: auto;
+    margin-left: 35px;
+}
+.footer-link{
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #595959;
+    text-decoration: none;
+}
+.footer-link:not(:last-child){
+    margin-right: 15px;
+}
+.social-links{
+    display: flex;
+    align-items: center;
+}
+.social-link:not(:last-child){
+    margin-right: 21px;
+}
+
+@media(max-width: 1366px){
+    .container{
+        max-width: 960px;
+    }
+    .promo{
+       background-size: 450px; 
+       background-position: top right -100px;
+    }
+    .card-category, .card-price{
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 992px){
+    .container{
+        max-width: 750px;
+    }
+    .promo{
+        padding: 50px;
+        background-size: 350px; 
+        background-position: top right -150px;
+    }
+    .promo-text{
+        font-size: 18px;
+    }
+    .card{
+        flex-basis: 49%;
+    }
+    .footer-link{
+        font-size: 16px;
+    }
+}
+
+@media(max-width:768px){
+    .container{
+        max-width: 560px;
+    }
+    .card-info{
+        flex-wrap: wrap;
+    }
+    .card-rating{
+        flex-basis: 100%;
+    }
+    .card-title{
+        font-size: 16px;
+    }
+    .promo{
+        background-size: 300px; 
+        background-position: top -10px right -160px;
+    }
+    .promo-title{
+        font-size: 24px;
+        line-height: 1.4;
+    }    
+}
+
+@media(max-width: 576px){
+    .container{
+        max-width: 90%;
+    }
+    .header{
+        flex-wrap: wrap;
+    }
+    .input-address{
+        margin-top: 15px;
+        order: 5;
+        flex: 1;
+    }
+    .promo{
+        background-image: none;
+    }
+    .promo-title{
+        margin-bottom: 10px;
+    }
+    .section-title{
+        font-size: 20px;
+    }
+    .card{
+        flex-basis: 100%;
+    }
+    .card-img{
+        width: 100%;
+        height: auto;
+    }
+    .footer{
+        padding: 30px 0;
+    }
+    .footer-block{
+        align-items: flex-start;
+    }
+    .footer-nav{
+        margin-left: 0;
+        order: 0;
+    }
+    .footer-logo{
+        margin-right: 15px;
+        order: 1;
+    }
+    .social-links{
+        order: 2;
+    }
+}
+@media(max-width:480px){
+    .button-text{
+        display: none;
+    }
+    .button{
+        min-height: 40px;
+    }
+    .promo{
+        padding: 20px;
+    }
+    .section-heading{
+        flex-wrap: wrap;
+    }
+    .footer-block{
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .footer-logo{
+        order: 0;
+        margin-bottom: 20px;
+    }
+    .footer-link:not(:last-child){
+        margin-right: 0;
+    }
 }
